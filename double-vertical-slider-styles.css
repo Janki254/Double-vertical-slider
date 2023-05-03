@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* styles for Left slides with bg-color  */
+
+.left-slide {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.left-slide h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+/* styles for Right slides with bg-image */
+
+.right-slide {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    transition: transform 0.5s ease-in-out;
+}
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+/* styles for Slider buttons */
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #8a8787;
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider-container .slider-buttons button {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    z-index: 100;
+}
+.slider-container .slider-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.slider-container .slider-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
